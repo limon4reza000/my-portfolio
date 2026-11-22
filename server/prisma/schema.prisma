@@ -1,0 +1,189 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+/// Single-row table: identity, section copy and section visibility flags.
+model Profile {
+  id               Int      @id @default(1)
+  name             String
+  shortName        String
+  title            String // "Software Engineer"
+  role             String // "Software Engineer · Full-Stack Developer"
+  headline         String
+  subheadline      String
+  available        Boolean  @default(true)
+  availabilityText String
+  statusText       String
+  location         String
+  email            String // "" hides email links
+  heroImage        String
+  aboutImage       String
+  aboutHeadline    String
+  nowText          String
+  aboutIntro       String
+  aboutBody        String
+  focusLabel       String
+  focusAreas       String[]
+  platforms        Json // [{ mark, name, badge, url, icon }]  (url "" = hidden)
+  socials          Json // [{ label, url }]                    (url "" = hidden)
+
+  // ---- Section visibility. Flip to true once you have real content. ----
+  showProjects            Boolean @default(false) // Selected Projects + /work page
+  showProjectHighlights   Boolean @default(false)
+  showProjectWalkthroughs Boolean @default(false)
+
+  updatedAt DateTime @updatedAt
+}
+
+model Stat {
+  id        Int     @id @default(autoincrement())
+  group     String // "hero" | "about" | "approach"
+  value     String
+  label     String
+  highlight Boolean @default(false)
+  order     Int     @default(0)
+
+  @@index([group, order])
+}
+
+/// Technologies shown in the hero marquee.
+model Technology {
+  id       Int    @id @default(autoincrement())
+  name     String
+  category String
+  icon     String // simple-icons slug, e.g. "nextdotjs"
+  order    Int    @default(0)
+}
+
+/// Education, learning journey and experience timeline.
+model Experience {
+  id          Int     @id @default(autoincrement())
+  kind        String // "education" | "learning" | "experience"
+  year        String?
+  title       String
+  company     String
+  description String
+  period      String
+  order       Int     @default(0)
+}
+
+model Tool {
+  id      Int     @id @default(autoincrement())
+  abbr    String
+  icon    String?
+  name    String
+  purpose String
+  category String
+  level   String? // only set once confirmed, e.g. "Comfortable"
+  percent Int? // optional skill meter (0-100); hidden when null
+  order   Int     @default(0)
+}
+
+model Skill {
+  id    Int    @id @default(autoincrement())
+  group String // "Frontend" | "Backend" | "Database" | "Problem-solving"
+  name  String
+  order Int    @default(0)
+}
+
+model Service {
+  id          Int    @id @default(autoincrement())
+  title       String
+  description String
+  order       Int    @default(0)
+}
+
+enum ProjectFormat {
+  VERTICAL // mobile screenshot (9:16)
+  HORIZONTAL // desktop screenshot (16:9)
+}
+
+model Project {
+  id          Int           @id @default(autoincrement())
+  title       String
+  description String
+  format      ProjectFormat @default(HORIZONTAL)
+  category    String
+  thumbnail   String
+  techStack   String[]
+  liveUrl     String?
+  githubUrl   String?
+  videoUrl    String? // walkthrough video (YouTube/Vimeo/mp4) → Project Walkthroughs
+  highlight   String? // one-paragraph highlight → Project Highlights
+  beforeImage String? // optional redesign comparison → Project Highlights slider
+  afterImage  String?
+  featured    Boolean       @default(false)
+  order       Int           @default(0)
+  createdAt   DateTime      @default(now())
+
+  @@index([format, category])
+}
+
+/// "Development Highlights" cards. `slot` picks the card position in the layout.
+model Highlight {
+  id          Int      @id @default(autoincrement())
+  slot        String   @unique // primary | side1 | side2 | row1 | row2 | row3
+  label       String
+  tag         String?
+  value       String
+  description String
+  chips       String[]
+  order       Int      @default(0)
+}
+
+/// Development environment visuals under the highlights.
+model Visual {
+  id    Int    @id @default(autoincrement())
+  title String
+  image String
+  order Int    @default(0)
+}
+
+model ProcessStep {
+  id          Int      @id @default(autoincrement())
+  title       String
+  description String
+  tags        String[]
+  deliverable String
+  duration    Int      @default(4) // seconds this stage plays on the animated timeline
+  order       Int      @default(0)
+}
+
+model Comparison {
+  id      Int    @id @default(autoincrement())
+  label   String
+  typical String
+  mine    String
+  order   Int    @default(0)
+}
+
+model Faq {
+  id       Int    @id @default(autoincrement())
+  question String
+  answer   String
+  order    Int    @default(0)
+}
+
+enum MessageStatus {
+  NEW
+  READ
+  ARCHIVED
+}
+
+model ContactMessage {
+  id        String        @id @default(cuid())
+  name      String
+  email     String
+  subject   String
+  message   String
+  status    MessageStatus @default(NEW)
+  ip        String?
+  createdAt DateTime      @default(now())
+
+  @@index([createdAt])
+}

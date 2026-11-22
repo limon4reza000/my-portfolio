@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1160" width="800" height="1160">
+  <defs><linearGradient id="s" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#4a5862"/><stop offset="1" stop-color="#1b2429"/></linearGradient></defs>
+  <path d="M 335 470 L 335 560 C 335 600, 465 600, 465 560 L 465 470 Z" fill="#2c373e"/>
+  <ellipse cx="400" cy="340" rx="150" ry="175" fill="url(#s)"/>
+  <path d="M 60 1160 C 70 800, 180 620, 330 585 C 360 610, 440 610, 470 585 C 620 620, 730 800, 740 1160 Z" fill="url(#s)"/>
+  <text x="400" y="1020" text-anchor="middle" font-family="Geist Mono, ui-monospace, monospace" font-size="20" fill="#929b9f" letter-spacing="2">[ DROP hero.png INTO public/assets ]</text>
+</svg>

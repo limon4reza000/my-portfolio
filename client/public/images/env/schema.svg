@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 380" width="600" height="380">
+  <rect width="600" height="380" fill="#101619"/>
+  <rect width="600" height="34" fill="#151d21"/>
+  <circle cx="18" cy="17" r="5" fill="#f05252"/><circle cx="36" cy="17" r="5" fill="#f5c451"/><circle cx="54" cy="17" r="5" fill="#b7f36b"/>
+  <text x="300" y="21" text-anchor="middle" font-family="Geist Mono, ui-monospace, monospace" font-size="11" fill="#929b9f">schema.prisma · PostgreSQL</text>
+  <line x1="0" y1="34" x2="600" y2="34" stroke="#283238"/>
+  <rect x="0" y="35" width="600" height="345" fill="#090d0f"/>
+  <path d="M190 120 C 203 120, 203 190, 216 190" stroke="#b7f36b" stroke-width="1.5" fill="none" stroke-dasharray="4 3"/>
+  <path d="M384 190 C 397 190, 397 110, 410 110" stroke="#b7f36b" stroke-width="1.5" fill="none" stroke-dasharray="4 3"/>
+  
+  <g>
+    <rect x="22" y="64" width="168" height="118" rx="8" fill="#151d21" stroke="#283238"/>
+    <rect x="22" y="64" width="168" height="28" rx="8" fill="#1d272d"/>
+    <text x="34" y="83" font-family="Geist Mono, ui-monospace, monospace" font-size="12" fill="#b7f36b">User</text>
+    <text x="34" y="111" font-family="Geist Mono, ui-monospace, monospace" font-size="11" fill="#f4f5f2">id</text><text x="178" y="111" font-family="Geist Mono, ui-monospace, monospace" font-size="10" fill="#929b9f" text-anchor="end">Int @id</text><text x="34" y="133" font-family="Geist Mono, ui-monospace, monospace" font-size="11" fill="#f4f5f2">email</text><text x="178" y="133" font-family="Geist Mono, ui-monospace, monospace" font-size="10" fill="#929b9f" text-anchor="end">String</text><text x="34" y="155" font-family="Geist Mono, ui-monospace, monospace" font-size="11" fill="#f4f5f2">name</text><text x="178" y="155" font-family="Geist Mono, ui-monospace, monospace" font-size="10" fill="#929b9f" text-anchor="end">String</text><text x="34" y="177" font-family="Geist Mono, ui-monospace, monospace" font-size="11" fill="#f4f5f2">createdAt</text><text x="178" y="177" font-family="Geist Mono, ui-monospace, monospace" font-size="10" fill="#929b9f" text-anchor="end">DateTime</text>
+  </g>
+  
+  <g>
+    <rect x="216" y="150" width="168" height="140" rx="8" fill="#151d21" stroke="#283238"/>
+    <rect x="216" y="150" width="168" height="28" rx="8" fill="#1d272d"/>
+    <text x="228" y="169" font-family="Geist Mono, ui-monospace, monospace" font-size="12" fill="#b7f36b">Project</text>
+    <text x="228" y="197" font-family="Geist Mono, ui-monospace, monospace" font-size="11" fill="#f4f5f2">id</text><text x="372" y="197" font-family="Geist Mono, ui-monospace, monospace" font-size="10" fill="#929b9f" text-anchor="end">Int @id</text><text x="228" y="219" font-family="Geist Mono, ui-monospace, monospace" font-size="11" fill="#f4f5f2">title</text><text x="372" y="219" font-family="Geist Mono, ui-monospace, monospace" font-size="10" fill="#929b9f" text-anchor="end">String</text><text x="228" y="241" font-family="Geist Mono, ui-monospace, monospace" font-size="11" fill="#f4f5f2">techStack</text><text x="372" y="241" font-family="Geist Mono, ui-monospace, monospace" font-size="10" fill="#929b9f" text-anchor="end">String[]</text><text x="228" y="263" font-family="Geist Mono, ui-monospace, monospace" font-size="11" fill="#f4f5f2">liveUrl</text><text x="372" y="263" font-family="Geist Mono, ui-monospace, monospace" font-size="10" fill="#929b9f" text-anchor="end">String?</text><text x="228" y="285" font-family="Geist Mono, ui-monospace, monospace" font-size="11" fill="#f4f5f2">authorId</text><text x="372" y="285" font-family="Geist Mono, ui-monospace, monospace" font-size="10" fill="#929b9f" text-anchor="end">Int</text>
+  </g>
+  
+  <g>
+    <rect x="410" y="64" width="168" height="74" rx="8" fill="#151d21" stroke="#283238"/>
+    <rect x="410" y="64" width="168" height="28" rx="8" fill="#1d272d"/>
+    <text x="422" y="83" font-family="Geist Mono, ui-monospace, monospace" font-size="12" fill="#b7f36b">Tag</text>
+    <text x="422" y="111" font-family="Geist Mono, ui-monospace, monospace" font-size="11" fill="#f4f5f2">id</text><text x="566" y="111" font-family="Geist Mono, ui-monospace, monospace" font-size="10" fill="#929b9f" text-anchor="end">Int @id</text><text x="422" y="133" font-family="Geist Mono, ui-monospace, monospace" font-size="11" fill="#f4f5f2">name</text><text x="566" y="133" font-family="Geist Mono, ui-monospace, monospace" font-size="10" fill="#929b9f" text-anchor="end">String</text>
+  </g>
+  
+  <g>
+    <rect x="22" y="230" width="168" height="96" rx="8" fill="#151d21" stroke="#283238"/>
+    <rect x="22" y="230" width="168" height="28" rx="8" fill="#1d272d"/>
+    <text x="34" y="249" font-family="Geist Mono, ui-monospace, monospace" font-size="12" fill="#b7f36b">Message</text>
+    <text x="34" y="277" font-family="Geist Mono, ui-monospace, monospace" font-size="11" fill="#f4f5f2">id</text><text x="178" y="277" font-family="Geist Mono, ui-monospace, monospace" font-size="10" fill="#929b9f" text-anchor="end">cuid</text><text x="34" y="299" font-family="Geist Mono, ui-monospace, monospace" font-size="11" fill="#f4f5f2">subject</text><text x="178" y="299" font-family="Geist Mono, ui-monospace, monospace" font-size="10" fill="#929b9f" text-anchor="end">String</text><text x="34" y="321" font-family="Geist Mono, ui-monospace, monospace" font-size="11" fill="#f4f5f2">message</text><text x="178" y="321" font-family="Geist Mono, ui-monospace, monospace" font-size="10" fill="#929b9f" text-anchor="end">String</text>
+  </g>
+</svg>

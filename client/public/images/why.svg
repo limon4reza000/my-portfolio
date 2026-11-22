@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 800" width="880" height="800">
+  <defs>
+    <radialGradient id="g" cx="50%" cy="35%" r="70%"><stop offset="0" stop-color="#1f2a30"/><stop offset="1" stop-color="#090d0f"/></radialGradient>
+    <linearGradient id="s" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#3a4750"/><stop offset="1" stop-color="#1b2429"/></linearGradient>
+  </defs>
+  <rect width="880" height="800" fill="url(#g)"/>
+  <circle cx="440" cy="288" r="149.60000000000002" fill="url(#s)"/>
+  <path d="M 123.20000000000002 800 C 140.8 528, 299.20000000000005 463.99999999999994, 440 463.99999999999994 C 580.8000000000001 463.99999999999994, 739.1999999999999 528, 756.8 800 Z" fill="url(#s)"/>
+  <text x="440" y="744" text-anchor="middle" font-family="Geist Mono, ui-monospace, monospace" font-size="22.88" fill="#929b9f" letter-spacing="2">[ DROP why.jpg INTO public/assets ]</text>
+</svg>

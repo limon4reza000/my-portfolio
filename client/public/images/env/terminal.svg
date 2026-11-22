@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 380" width="600" height="380">
+  <rect width="600" height="380" fill="#101619"/>
+  <rect width="600" height="34" fill="#151d21"/>
+  <circle cx="18" cy="17" r="5" fill="#f05252"/><circle cx="36" cy="17" r="5" fill="#f5c451"/><circle cx="54" cy="17" r="5" fill="#b7f36b"/>
+  <text x="300" y="21" text-anchor="middle" font-family="Geist Mono, ui-monospace, monospace" font-size="11" fill="#929b9f">zsh — my-portfolio</text>
+  <line x1="0" y1="34" x2="600" y2="34" stroke="#283238"/>
+  <rect x="0" y="35" width="600" height="345" fill="#090d0f"/>
+  <text x="24" y="62" font-family="Geist Mono, ui-monospace, monospace" font-size="12" xml:space="preserve"><tspan fill="#b7f36b">➜ </tspan><tspan fill="#82aaff">my-portfolio </tspan><tspan fill="#c792ea">git:(</tspan><tspan fill="#f78c6c">main</tspan><tspan fill="#c792ea">) </tspan><tspan fill="#f4f5f2">npm run dev</tspan></text>
+  <text x="24" y="82" font-family="Geist Mono, ui-monospace, monospace" font-size="12" xml:space="preserve"><tspan fill="#b7f36b">[api] </tspan><tspan fill="#929b9f">API listening on http://localhost:4000/api</tspan></text>
+  <text x="24" y="102" font-family="Geist Mono, ui-monospace, monospace" font-size="12" xml:space="preserve"><tspan fill="#82aaff">[web] </tspan><tspan fill="#929b9f">▲ Next.js 15 · Local: http://localhost:3000</tspan></text>
+  <text x="24" y="122" font-family="Geist Mono, ui-monospace, monospace" font-size="12" xml:space="preserve"><tspan fill="#82aaff">[web] </tspan><tspan fill="#b7f36b">✓ Ready in 2.1s</tspan></text>
+  <text x="24" y="142" font-family="Geist Mono, ui-monospace, monospace" font-size="12" xml:space="preserve"></text>
+  <text x="24" y="162" font-family="Geist Mono, ui-monospace, monospace" font-size="12" xml:space="preserve"><tspan fill="#b7f36b">➜ </tspan><tspan fill="#82aaff">my-portfolio </tspan><tspan fill="#f4f5f2">npx prisma migrate dev</tspan></text>
+  <text x="24" y="182" font-family="Geist Mono, ui-monospace, monospace" font-size="12" xml:space="preserve"><tspan fill="#b7f36b">✔ </tspan><tspan fill="#929b9f">Your database is now in sync with your schema.</tspan></text>
+  <text x="24" y="202" font-family="Geist Mono, ui-monospace, monospace" font-size="12" xml:space="preserve"></text>
+  <text x="24" y="222" font-family="Geist Mono, ui-monospace, monospace" font-size="12" xml:space="preserve"><tspan fill="#b7f36b">➜ </tspan><tspan fill="#82aaff">my-portfolio </tspan><tspan fill="#f4f5f2">npm run build</tspan></text>
+  <text x="24" y="242" font-family="Geist Mono, ui-monospace, monospace" font-size="12" xml:space="preserve"><tspan fill="#b7f36b">✓ </tspan><tspan fill="#929b9f">Compiled successfully</tspan></text>
+  <text x="24" y="262" font-family="Geist Mono, ui-monospace, monospace" font-size="12" xml:space="preserve"><tspan fill="#b7f36b">✓ </tspan><tspan fill="#929b9f">Linting and checking validity of types</tspan></text>
+  <text x="24" y="282" font-family="Geist Mono, ui-monospace, monospace" font-size="12" xml:space="preserve"></text>
+  <text x="24" y="302" font-family="Geist Mono, ui-monospace, monospace" font-size="12" xml:space="preserve"><tspan fill="#b7f36b">➜ </tspan><tspan fill="#82aaff">my-portfolio </tspan><tspan fill="#f4f5f2">git push origin main</tspan></text>
+  <text x="24" y="322" font-family="Geist Mono, ui-monospace, monospace" font-size="12" xml:space="preserve"><tspan fill="#b7f36b">█</tspan></text>
+</svg>
