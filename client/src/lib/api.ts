@@ -4,7 +4,8 @@ import type { ContactPayload, PortfolioData, Profile, Project } from './types';
  * Server components call the Express API directly (API_URL).
  * Browser code calls the same-origin `/api/*` path, which next.config.mjs proxies.
  */
-const SERVER_BASE = process.env.API_URL || 'http://localhost:4000';
+const RAW_BASE = (process.env.API_URL || 'http://localhost:4000').trim().replace(/\/+$/, '');
+const SERVER_BASE = /^https?:\/\//.test(RAW_BASE) ? RAW_BASE : `https://${RAW_BASE}`;
 const base = () => (typeof window === 'undefined' ? SERVER_BASE : '');
 
 export class ApiError extends Error {

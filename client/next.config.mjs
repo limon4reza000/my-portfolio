@@ -1,5 +1,7 @@
 /** @type {import('next').NextConfig} */
-const API_URL = process.env.API_URL || 'http://localhost:4000';
+// Accept API_URL with or without a scheme / trailing slash.
+const raw = (process.env.API_URL || 'http://localhost:4000').trim().replace(/\/+$/, '');
+const API_URL = /^https?:\/\//.test(raw) ? raw : `https://${raw}`;
 
 const nextConfig = {
   reactStrictMode: true,
